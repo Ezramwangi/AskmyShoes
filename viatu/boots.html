@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sneakers | Ask My Shoe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Modal base */
+    .modal { display: none; }
+    .modal.active { display: flex; }
+    /* Simple input error styling */
+    .input-error { outline: 2px solid #ef4444; box-shadow: 0 0 0 3px rgba(239,68,68,0.08); }
+    /* Prevent image selection flicker on some devices */
+    img { -webkit-user-drag: none; user-select: none; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  
+
+  <!-- HEADER -->
+  <header class="text-center py-8 bg-yellow-200">
+    <h1 class="text-4xl font-bold text-yellow-700">Sneakers Collection</h1>
+    <p class="text-sm">Trendy sneakers for everyone!</p>
+  </header>
+
+  <button onclick="history.back()" style="
+  background-color: #ff5a5f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+">
+  Go to Homepage
+</button>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+    <!-- PRODUCT CARDS (using your original image paths & names) -->
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Nike Air Force 1 Low in Pink & White"
+         data-price="Ksh 2,500"
+         data-image="shoes_images/sneakers/pinky airforce.jpg">
+      <img src="shoes_images/sneakers/pinky airforce.jpg" alt="Nike Air Force 1 Low in pink and white" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Nike Air Force 1 Low in Pink & White</p>
+      <p class="text-sm text-gray-600">Ksh 2,500</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Nike Air Force 1 Low in Pink"
+         data-price="Ksh 3,200"
+         data-image="shoes_images/sneakers/pink airforce.jpg">
+      <img src="shoes_images/sneakers/pink airforce.jpg" alt="Nike Air Force 1 Low in pink" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Nike Air Force 1 Low in Pink</p>
+      <p class="text-sm text-gray-600">Ksh 3,200</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Nike Court Vision Low - Brown/Tan"
+         data-price="Ksh 2,500"
+         data-image="shoes_images/sneakers/leather sneakers.jpg">
+      <img src="shoes_images/sneakers/leather sneakers.jpg" alt="Nike Court Vision Low in brown" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Nike Court Vision Low - Brown/Tan</p>
+      <p class="text-sm text-gray-600">Ksh 2,500</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Green Air Force"
+         data-price="Ksh 3,200"
+         data-image="shoes_images/sneakers/green airforce.jpg">
+      <img src="shoes_images/sneakers/green airforce.jpg" alt="Green Nike Air Force" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Green Air Force</p>
+      <p class="text-sm text-gray-600">Ksh 3,200</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Blue & White Air Force"
+         data-price="Ksh 2,500"
+         data-image="shoes_images/sneakers/blue-white airforce.jpg">
+      <img src="shoes_images/sneakers/blue-white airforce.jpg" alt="Blue and White Nike Air Force" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Blue & White Air Force</p>
+      <p class="text-sm text-gray-600">Ksh 2,500</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Blue Air Force"
+         data-price="Ksh 3,200"
+         data-image="shoes_images/sneakers/blue airforce.jpg">
+      <img src="shoes_images/sneakers/blue airforce.jpg" alt="Blue Nike Air Force" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Blue Air Force</p>
+      <p class="text-sm text-gray-600">Ksh 3,200</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Black Air Force"
+         data-price="Ksh 2,500"
+         data-image="shoes_images/sneakers/black airforce.jpg">
+      <img src="shoes_images/sneakers/black airforce.jpg" alt="Black Nike Air Force" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Black Air Force</p>
+      <p class="text-sm text-gray-600">Ksh 2,500</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+    <div class="shoe-card bg-white p-4 rounded shadow hover:shadow-lg transition"
+         data-name="Breather Sneaker"
+         data-price="Ksh 1,200"
+         data-image="shoes_images/sneakers/breather sneaker.jpg">
+      <img src="shoes_images/sneakers/breather sneaker.jpg" alt="Breather Sneaker" class="rounded mb-2 w-full h-64 object-cover" />
+      <p class="font-semibold">Breather Sneaker</p>
+      <p class="text-sm text-gray-600">Ksh 1,200</p>
+      <button class="mt-2 text-sm bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 order-btn">Order Now</button>
+    </div>
+
+  </main>
+
+  <!-- MODAL -->
+  <div id="orderModal" class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg max-w-sm w-full p-6 relative mx-4">
+      <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800" aria-label="Close modal">&times;</button>
+      <img id="modalImage" src="" alt="" class="w-full h-48 object-cover rounded mb-4">
+      <h2 id="modalName" class="text-lg font-bold mb-1"></h2>
+      <p id="modalPrice" class="text-gray-600 mb-4"></p>
+
+      <label for="shoeSize" class="sr-only">Shoe Size</label>
+      <input type="text" id="shoeSize" placeholder="Enter Shoe Size" class="border p-2 w-full mb-2 rounded" />
+
+      <label for="deliveryLocation" class="sr-only">Delivery Location</label>
+      <input type="text" id="deliveryLocation" placeholder="Enter Delivery Location" class="border p-2 w-full mb-4 rounded" />
+
+      <button id="confirmOrder" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full">Order on WhatsApp</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 bg-gray-100 mt-10">
+    <p class="text-sm text-gray-600">&copy; 2025 Ask My Shoe. All rights reserved.</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Elements
+    const modal = document.getElementById('orderModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalName = document.getElementById('modalName');
+    const modalPrice = document.getElementById('modalPrice');
+    const closeModalBtn = document.getElementById('closeModal');
+    const confirmOrderBtn = document.getElementById('confirmOrder');
+    const sizeInput = document.getElementById('shoeSize');
+    const locationInput = document.getElementById('deliveryLocation');
+
+    // WhatsApp number in international format (no +)
+    const whatsappNumber = '254713333686';
+
+    let selectedShoe = null;
+
+    // Attach click to all order buttons
+    document.querySelectorAll('.order-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.shoe-card');
+        selectedShoe = {
+          name: card.dataset.name,
+          price: card.dataset.price,
+          image: card.dataset.image
+        };
+
+        // Use encodeURI for image path (handles spaces in filenames)
+        modalImage.src = encodeURI(selectedShoe.image);
+        modalImage.alt = selectedShoe.name;
+        modalName.textContent = selectedShoe.name;
+        modalPrice.textContent = selectedShoe.price;
+
+        // reset inputs + remove error states
+        sizeInput.value = '';
+        locationInput.value = '';
+        sizeInput.classList.remove('input-error');
+        locationInput.classList.remove('input-error');
+
+        // show modal and prevent body scroll
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // focus first input
+        setTimeout(() => sizeInput.focus(), 120);
+      });
+    });
+
+    // Close modal helper
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close button
+    closeModalBtn.addEventListener('click', closeModal);
+
+    // Close when clicking outside modal content
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+
+    // Confirm/order button handler
+    confirmOrderBtn.addEventListener('click', () => {
+      const size = sizeInput.value.trim();
+      const location = locationInput.value.trim();
+      let ok = true;
+
+      if (!size) {
+        sizeInput.classList.add('input-error');
+        ok = false;
+      } else {
+        sizeInput.classList.remove('input-error');
+      }
+
+      if (!location) {
+        locationInput.classList.add('input-error');
+        ok = false;
+      } else {
+        locationInput.classList.remove('input-error');
+      }
+
+      if (!ok) return;
+
+      // Build message and encode properly
+      const message = `Hi! I want to order the ${selectedShoe.name} (${selectedShoe.price})
+Size: ${size}
+Delivery Location: ${location}`;
+
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+
+      // close modal and clear state
+      closeModal();
+    });
+  </script>
+
+</body>
+</html>
